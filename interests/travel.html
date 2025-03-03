@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chigozie - Travel</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .container {
+      text-align: center;
+      padding-top: 120px;
+    }
+    .container ul {
+      list-style: disc;
+      margin: 0 auto;
+      padding-left: 0;
+      max-width: 600px;
+      line-height: 1.8;
+      text-align: center;
+    }
+    .container ul li {
+      margin-bottom: 1.5rem;
+    }
+    .secondary-nav {
+      margin-top: 2rem;
+    }
+    .secondary-nav a {
+      color: var(--accent-red);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .secondary-nav a:hover {
+      color: var(--gold);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../courses.html">Courses</a></li>
+        <li><a href="../interests.html">Interests</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h2 class="section-title">Travel</h2>
+    <p>Here are some of my favorite travel destinations and experiences:</p>
+    <ul>
+      <li>Paris, France</li>
+      <li>Tokyo, Japan</li>
+      <li>New York City, USA</li>
+      <li>Rome, Italy</li>
+      <li>Barcelona, Spain</li>
+    </ul>
+    <div class="secondary-nav">
+      <a href="../interests.html">← Back to Interests</a>
+      <a href="books.html">Books</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="travel.html">Travel</a>
+    </div>
+  </div>
+  
+  <footer>
+    <p>Last updated: <span id="last-updated"></span></p>
+  </footer>
+  <script>
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>

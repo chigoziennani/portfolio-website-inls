@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chigozie - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+      text-align: center;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 120px auto 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--gold);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(196, 30, 58, 0.3);
+    }
+    /* Anchor styles with arrow */
+    a {
+      position: relative;
+      color: var(--accent-red);
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    a::after {
+      content: " →";
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    a:hover {
+      color: var(--gold);
+      transform: scale(1.05);
+    }
+    a:hover::after {
+      transform: translateX(5px);
+    }
+    /* Courses list styled with bullet points */
+    .card ul {
+      list-style: disc;
+      text-align: left;
+      padding-left: 1.5rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">Welcome</h2>
+    <p>
+      Welcome to my portfolio! I’m Chigozie Nnani, a student passionate about technology and design.
+    </p>
+  </div>
+
+  <main class="grid-container">
+    <div class="card">
+      <h3>About Me</h3>
+      <p>
+        I’m a second-year Nigerian-American Information & Data Science student at UNC Chapel Hill.
+      </p>
+      <a href="about.html">Learn More</a>
+    </div>
+
+    <div class="card">
+      <h3>Current Courses</h3>
+      <ul>
+        <li>INLS 161 - Tools for Information Literacy</li>
+        <li>INLS 201 - Foundations of Information Science</li>
+        <li>INLS 560 - Programming for Information Science</li>
+        <li>MUSC 148 - Introduction to Black Music</li>
+        <li>PLAN 364 - Personal Finance II</li>
+      </ul>
+      <a href="courses.html">View Courses</a>
+    </div>
+
+    <div class="card">
+      <h3>Interests</h3>
+      <p>
+        Discover the books and topics I love and would take with me on a desert island.
+      </p>
+      <a href="interests.html">Explore Interests</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Last updated: <span id="last-updated"></span></p>
+    <p>Contact me at: <a id="email-link" href="#">[Email Protected]</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+    const user = "cfnnani";
+    const domain = "unc.edu";
+    const email = user + "@" + domain;
+    const emailLink = document.getElementById("email-link");
+    emailLink.textContent = email;
+    emailLink.href = "mailto:" + email;
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chigozie - Interests</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+      text-align: center;
+    }
+    .container ol {
+      line-height: 1.8;
+      margin: 0 auto;
+      padding: 0;
+      list-style-position: inside;
+      max-width: 600px;
+    }
+    .container ol li {
+      margin-bottom: 1.5rem;
+    }
+    .third-level {
+      margin-top: 3rem;
+    }
+    .third-level ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .third-level ul li a {
+      font-weight: bold;
+      color: var(--accent-red);
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .third-level ul li a:hover {
+      color: var(--gold);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">Interests</h2>
+    <p>
+      This page introduces topics or items of interest to me. Below is an ordered list of the 10 books I’d take with me if I were marooned on a desert island.
+    </p>
+    <ol>
+      <li>1984 by George Orwell</li>
+      <li>To Kill a Mockingbird by Harper Lee</li>
+      <li>The Great Gatsby by F. Scott Fitzgerald</li>
+      <li>Moby Dick by Herman Melville</li>
+      <li>Pride and Prejudice by Jane Austen</li>
+      <li>The Catcher in the Rye by J.D. Salinger</li>
+      <li>One Hundred Years of Solitude by Gabriel García Márquez</li>
+      <li>The Lord of the Rings by J.R.R. Tolkien</li>
+      <li>Brave New World by Aldous Huxley</li>
+      <li>The Odyssey by Homer</li>
+    </ol>
+
+    <div class="third-level">
+      <h3>Explore More Interests</h3>
+      <ul>
+        <li><a href="interests/books.html">Books</a></li>
+        <li><a href="interests/hobbies.html">Hobbies</a></li>
+        <li><a href="interests/travel.html">Travel</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Last updated: <span id="last-updated"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chigozie - About</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-content {
+      text-align: center;
+    }
+    .about-content p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .about-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 250px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .contact-form {
+      text-align: center;
+      margin: 2rem auto 0;
+      max-width: 400px;
+    }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-form label {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      text-align: left;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-color);
+    }
+    .contact-form button {
+      padding: 0.5rem 1rem;
+      background: var(--accent-red);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    
+    <img src="chi_headshot.jpg" alt="Chigozie Headshot" class="about-image">
+
+    <div class="about-content">
+      <p>
+        Hi, my name is Chigozie Nnani! I’m a second-year Nigerian-American Information & Data Science student at the University of North Carolina at Chapel Hill, originally from Raleigh, North Carolina.
+      </p>
+      <p>
+        Since the age of 3, I have always known I wanted to immerse myself in technology, leading to my desire to pursue data, software, or machine learning engineering. As an artistic person, I founded a clothing brand, InOptive Studios, at the age of 15 to explore the intersection of technology and creativity.
+      </p>
+      <p>
+        Through this venture, I’ve had the privilege of building a community of over 1,000 supporters and learning firsthand the impact of combining innovation with individuality.
+      </p>
+      <p>
+        At the University of North Carolina at Chapel Hill, I’ve expanded my skills and passions while also engaging with initiatives like ColorStack, BiT, and NSBE. These experiences have fueled my commitment to inclusivity in technology and to exploring creative solutions that make a meaningful impact.
+      </p>
+      <p>
+        Outside of tech, I’m passionate about graphic design, basketball, soccer, video games, spending time with family, or trying new things, and you’ll often find me using my iPad to express my creativity in one way or another.
+      </p>
+      <p>
+        Download my <a href="resume.pdf" target="_blank">résumé</a>.
+      </p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Contact Me</h3>
+      <form action="scripts/server-script.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Last updated: <span id="last-updated"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chigozie - Courses</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container ul {
+      text-align: center;
+      line-height: 1.8;
+      padding: 0;
+      list-style-position: inside;
+    }
+    .container ul li {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">Current Courses</h2>
+    <ul>
+      <li><a href="https://ils.unc.edu/~bergr/courses/2024-5_spring/inls161-001/s01.syllabus.html">INLS 161 - Tools for Information Literacy</a></li>
+      <li><a href="https://ils.unc.edu/~bergr/courses/2024-5_spring/inls201-001/">INLS 201 - Foundations of Information Science</a></li>
+      <li><a href="https://uncch.instructure.com/courses/75135">INLS 560 - Programming for Information Science</a></li>
+      <li><a href="https://uncch.instructure.com/courses/78163">MUSC 148 - Introduction to Black Music</a></li>
+      <li><a href="https://uncch.instructure.com/courses/81591">PLAN 364 - Personal Finance II</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Last updated: <span id="last-updated"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
